@@ -5,7 +5,9 @@ btn1.addEventListener("click", (e) => {
   fetch("https://pruebas.mipgenlinea.com/homePage", {
     method: "POST",
     body: JSON.stringify({
-      email: "arz.95@gmail.com",
+      token:
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzY1NjE5OTUsImV4cCI6MTY3NjY0ODM5NSwiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6ImFyekBnbWFpbC5jb20ifX0.AHYbljfZfQxekdceVjrLVJZfcY6ukm7DRiyPTq4UOdA",
+      id_usuario_cliente: 4,
       latitud: 4.265434,
       longitud: -75.928713,
     }),
@@ -39,7 +41,7 @@ btn1.addEventListener("click", (e) => {
         for (const iterator of data["detail"]["servicios_zona"]) {
           items += `
               <div>
-                <object data="https://pruebas.mipgenlinea.com/${iterator["imagen_servicio"]}" width="150" height="150"> </object>
+                <object data="https://pruebas.mipgenlinea.com/${iterator["ruta_imagen_servicio"]}" width="150" height="150"> </object>
                 <h2>${iterator["descripcion_servicio"]}</h2>
                 
               </div>

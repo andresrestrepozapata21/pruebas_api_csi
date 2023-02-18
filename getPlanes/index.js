@@ -36,7 +36,9 @@ btn2.addEventListener("click", (e) => {
   fetch("https://pruebas.mipgenlinea.com/getPlan", {
     method: "POST",
     body: JSON.stringify({
-      id_plan: 1,
+      token:
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzYzODg4MDQsImV4cCI6MTY3NjQ3NTIwNCwiZGF0YSI6eyJpZCI6IjEzIiwiZW1haWwiOiJkaWVnb2FyYmVsYWV6LmNvQGdtYWlsLmNvbSJ9fQ.qgguMiTLrbubVX_5QKJtwNYv3Vp3KqWjE9x3Ydt3hKw",
+      id_plan: 10,
     }),
   })
     .then((res) => res.json())

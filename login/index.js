@@ -8,7 +8,7 @@ btn1.addEventListener("click", (e) => {
   fetch("https://pruebas.mipgenlinea.com/customerLogin", {
     method: "POST",
     body: JSON.stringify({
-      email: "arz.951@gmail.com",
+      email: "diegoarbelaez.co@gmail.com",
       password: "12345",
     }),
     headers: {
