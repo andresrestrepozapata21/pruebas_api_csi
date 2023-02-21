@@ -4,7 +4,7 @@ var answer = document.getElementById("answer");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
-  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzY5MzE2NzUsImV4cCI6MTY5MTQ0Njg3NSwiZGF0YSI6eyJpZCI6IjQiLCJlbWFpbCI6ImFyei45NUBnbWFpbC5jb20ifX0.PkwOlsrhsPHDVV5RxCkcGj_JQAxfD3iNGQnHZq-phD0');
+  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzY5OTI3NzMsImV4cCI6MTY5MTUwNzk3MywiZGF0YSI6eyJpZCI6IjQiLCJlbWFpbCI6ImFyei45NUBnbWFpbC5jb20ifX0.0fQgG3SVZ8OxKNUfFQHkkS3rZN29IGcEVIG0cHm06ps');
   fetch("https://pruebas.mipgenlinea.com/alertRecord", {
     method: "POST",
     body: datos,
