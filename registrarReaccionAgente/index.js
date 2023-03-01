@@ -3,11 +3,16 @@ var answer = document.getElementById("answer");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  let datos = new FormData(form);
-  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc2OTg5OTcsImV4cCI6MTY5MjIxNDE5NywiZGF0YSI6eyJpZCI6Ijc3IiwiZW1haWwiOiJhcnouMzY1QGdtYWlsLmNvbSJ9fQ.kIQQZcrhk_mGqWaNmZgICcKLq35GMBGK60_n_TqP3p0');
-  fetch("https://pruebas.mipgenlinea.com/alertRecord", {
+  fetch("https://pruebas.mipgenlinea.com/reactionAgentAlert", {
     method: "POST",
-    body: datos,
+    body: JSON.stringify({
+      token:
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc1Mzg4NzIsImV4cCI6MTY5MjA1NDA3MiwiZGF0YSI6eyJpZCI6IjI0IiwiZW1haWwiOiJhcnpAZ21haWwuY29tIn19.TAHFoVjhh1SkiHRer5tmbCEaQU70vmilyPPbRYLj1f8",
+      latitud: 4.265434,
+      longitud: -75.928713,
+      fk_id_usuario_agente: 24,
+      fk_id_alerta: 122,
+    }),
   })
     .then((res) => res.json())
     .then((data) => {
@@ -22,14 +27,10 @@ form.addEventListener("submit", (e) => {
         <div class="alert alert-success" role="alert">
               ${data["result"]}
               <br>
-              <br>
-              ${data["detail"]}
           </div>
         `;
 
         console.log(data);
-        console.log(data["detail"]);
-        form.reset();
       }
     });
 });

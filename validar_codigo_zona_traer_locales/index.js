@@ -6,7 +6,7 @@ btn1.addEventListener("click", (e) => {
     method: "POST",
     body: JSON.stringify({
       token:
-        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzY2NzA5MzIsImV4cCI6MTY3Njc1NzMzMiwiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6ImFyekBnbWFpbC5jb20ifX0.Q4qxgd3nXxqK8FJyu0cRrz7RGRaBxHmJ5o7j9DTE1H0",
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc1MTgzMTMsImV4cCI6MTY5MjAzMzUxMywiZGF0YSI6eyJpZCI6Ijc3IiwiZW1haWwiOiJhcnouMzY1QGdtYWlsLmNvbSJ9fQ.WK6he1-i336i4I5x842k2lehJmO0cJ0DRIDDLuNVJ5E",
       id_zona: 3,
       codigo_zona: "PAL2023",
     }),
@@ -35,6 +35,8 @@ btn1.addEventListener("click", (e) => {
                 <div>
                 <img src="https://pruebas.mipgenlinea.com/${iterator["ruta_imagen_establecimiento"]}" width="150" height="150"> </img>
                 <h2>${iterator["nombre_establecimiento"]}</h2>
+                <h2>${iterator["nombre_promocion"]}</h2>
+                <p>${iterator["descripcion_corta_promocion"]}</p>
                 </div>
                 <br>
                 `;
@@ -42,7 +44,7 @@ btn1.addEventListener("click", (e) => {
             
             answer1.innerHTML = `
             <h1>${zona_patrocinada}</h1>
-            <img src="${data["detail"]["zona"]["ruta_imagen_zona"]}" alt="">
+            <img src="https://pruebas.mipgenlinea.com/${data["detail"]["zona"]["ruta_imagen_zona"]}" alt="">
             <h1>${data["detail"]["zona"]["descripcion_zona"]}</h1>
             
             <h2>adicionales para ti</h2>

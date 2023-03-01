@@ -13,12 +13,12 @@
         <input type="text" name="latitud_alerta" value="4.265434" readonly/><br>
         <input type="text" name="longitud_alerta" value="-75.928713" readonly/><br>
         <textarea name="comentario_alerta" id="" cols="30" rows="5"></textarea><br>
-        <input type="text" name="fk_id_usuario_cliente_alerta" value="4" readonly/><br>
-        <input type="text" name="fk_id_servicio_por_zona_alerta" value="1" readonly/><br>
+        <input type="text" name="fk_id_usuario_cliente_alerta" value="6" readonly/><br>
+        <input type="text" name="fk_id_servicio_por_zona_alerta" value="3" readonly/><br>
         <br>
         <input
-          name="file"
-          id="file"
+          name="file1"
+          id="file1"
           type="file"
           class="form-control-file"
         />
@@ -26,7 +26,27 @@
           >El archivo debe ser inferior a 5MB</small
         ><br>
         <br />
-        <button class="mt-1 btn btn-primary" id="btn1">Elegir servicio para lanzar alerta</button>
+        <input
+        name="file2"
+        id="file2"
+        type="file"
+        class="form-control-file"
+      />
+      <small class="form-text text-muted"
+        >El archivo debe ser inferior a 5MB</small
+      ><br>
+      <br />
+      <input
+      name="file3"
+      id="file3"
+      type="file"
+      class="form-control-file"
+    />
+    <small class="form-text text-muted"
+      >El archivo debe ser inferior a 5MB</small
+    ><br>
+    <br />
+        <button class="mt-1 btn btn-primary" id="btn1">Registrar alerta</button>
       </form>
     </div>
     <br />
