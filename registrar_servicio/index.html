@@ -11,13 +11,15 @@
 <body>
    <form id="form1">
         <fieldset>
-            <div class="position-relative form-group"><label for="exampleFile" class="">foto de perfil</label>
-                <input type="hidden" name="id" value="13">
+            <div class="position-relative form-group">
+                <input type="text" name="descripcion_servicio">
+                <input type="text" name="puntos_servicio">
+                <input type="text" name="color_sombra_servicio">
                 <input name="file" id="file" type="file" class="form-control-file" required>
                 <small class="form-text text-muted">El archivo debe ser inferior a 5MB</small>
             </div>
             <br>
-            <button class="mt-1 btn btn-primary" type="submit">Cambiar imagen del Servicio</button>
+            <button class="mt-1 btn btn-primary" type="submit">Crear Servicio</button>
         </fieldset>
     </form>
     <div class="mt-3" id="answer"></div>

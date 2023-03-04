@@ -4,8 +4,8 @@ var answer = document.getElementById("answer");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
-  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzY1MDMxNTIsImV4cCI6MTY3NjU4OTU1MiwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6ImFyei45NTAyMDNAZ21haWwuY29tIn19.fPUEeeL2ee0N4hOB9XG2sJ9yoqoxMwCoXF8KD2PB1TE');
-  fetch("https://pruebas.mipgenlinea.com/planImageUpdate", {
+  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc3ODQ0MDUsImV4cCI6MTY5MjI5OTYwNSwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6ImFyei45NTAyMDNAZ21haWwuY29tIn19.N2NdDBg2b60CUG14PNc2qufC79SYGckEhUw_Duc4N6c');
+  fetch("https://pruebas.mipgenlinea.com/serviceUpdate", {
     method: "POST",
     body: datos,
   })
@@ -21,8 +21,14 @@ form.addEventListener("submit", (e) => {
         answer.innerHTML = `
         <div class="alert alert-success" role="alert">
               ${data["result"]}
+              <br>
+              <br>
+              ${data["detail"]}
           </div>
         `;
+
+        console.log(data);
+        console.log(data["detail"]);
         form.reset();
       }
     });

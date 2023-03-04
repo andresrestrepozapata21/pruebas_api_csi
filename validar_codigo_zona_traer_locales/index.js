@@ -6,7 +6,7 @@ btn1.addEventListener("click", (e) => {
     method: "POST",
     body: JSON.stringify({
       token:
-        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc1MTgzMTMsImV4cCI6MTY5MjAzMzUxMywiZGF0YSI6eyJpZCI6Ijc3IiwiZW1haWwiOiJhcnouMzY1QGdtYWlsLmNvbSJ9fQ.WK6he1-i336i4I5x842k2lehJmO0cJ0DRIDDLuNVJ5E",
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc5NDE1ODIsImV4cCI6MTY5MjQ1Njc4MiwiZGF0YSI6eyJpZCI6Ijc3IiwiZW1haWwiOiJhcnouMzY1QGdtYWlsLmNvbSJ9fQ.BZE2zMfkR35pgypIQwt-cuRfpR8eIdVmr7nul3imcoc",
       id_zona: 3,
       codigo_zona: "PAL2023",
     }),
