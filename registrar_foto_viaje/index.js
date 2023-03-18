@@ -4,10 +4,10 @@ var answer = document.getElementById("answer");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
-  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzgzMDU1MzAsImV4cCI6MTY5MjgyMDczMCwiZGF0YSI6eyJpZCI6IjYxIiwiZW1haWwiOiJhcnouMzVAZ21haWwuY29tIn19.xai-_cwJ8DOa-n7kUOYR37k822cD5cpUtAPMjk2GNzU');
-  fetch("https://pruebas.mipgenlinea.com/alertRecord", {
+  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzg0NjAyODksImV4cCI6MTY5Mjk3NTQ4OSwiZGF0YSI6eyJpZCI6IjYwIiwiZW1haWwiOiJhcnouMzRAZ21haWwuY29tIn19.I93KP1VE3WAZRpnnFnzPOHq5VEgoyQOadnbvCHch4O8');
+  fetch("https://pruebas.mipgenlinea.com/tripPictureRecord", {
     method: "POST",
-    body: datos,
+    body: datos,    
   })
     .then((res) => res.json())
     .then((data) => {
@@ -21,14 +21,8 @@ form.addEventListener("submit", (e) => {
         answer.innerHTML = `
         <div class="alert alert-success" role="alert">
               ${data["result"]}
-              <br>
-              <br>
-              ${data["detail"]}
           </div>
         `;
-
-        console.log(data);
-        console.log(data["detail"]);
         form.reset();
       }
     });
