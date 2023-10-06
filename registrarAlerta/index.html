@@ -9,12 +9,13 @@
 
   <body>
     <div id="eps">
-      <form id="form1">
-        <input type="text" name="latitud_alerta" value="4.265434" readonly/><br>
-        <input type="text" name="longitud_alerta" value="-75.928713" readonly/><br>
+      <form id="form1" enctype="multipart/form-data">
+        <input type="text" name="latitud_alerta" value="4.80568" readonly/><br>
+        <input type="text" name="longitud_alerta" value="-75.7164" readonly/><br>
         <textarea name="comentario_alerta" id="" cols="30" rows="5"></textarea><br>
-        <input type="text" name="fk_id_usuario_cliente_alerta" value="4" readonly/><br>
-        <input type="text" name="fk_id_servicio_por_zona_alerta" value="4" readonly/><br>
+        <input type="text" name="notificar_contactos" value="0" readonly/><br>
+        <input type="text" name="fk_id_usuario_cliente_alerta" value="232" readonly/><br>
+        <input type="text" name="fk_id_servicio_por_zona_alerta" value="23" readonly/><br>
         <br>
         <input
           name="file1"
@@ -43,9 +44,15 @@
       class="form-control-file"
     />
     <small class="form-text text-muted"
-      >El archivo debe ser inferior a 5MB</small
+      >El video debe ser inferior a 5MB</small
     ><br>
     <br />
+    <label for="">Cargar Video</label>
+    <br>
+    <br>
+      <input type="file" name="videoFile">
+    <br>
+    <br>
         <button class="mt-1 btn btn-primary" id="btn1">Registrar alerta</button>
       </form>
     </div>

@@ -4,8 +4,8 @@ var answer = document.getElementById("answer");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
-  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTQ0NTk3MjcsImV4cCI6MTcwODk3NDkyNywiZGF0YSI6eyJpZCI6IjIzMiIsImVtYWlsIjoiYXJ6Ljk1MDIwM0BnbWFpbC5jb20ifX0.lqx-kk8x6Fcn32OpULl3JEPta8LAyyMoCz11JR3P9cA');
-  fetch("https://apicsi.csisecurity.co/alertRecord", {
+  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzgzMDU1MzAsImV4cCI6MTY5MjgyMDczMCwiZGF0YSI6eyJpZCI6IjYxIiwiZW1haWwiOiJhcnouMzVAZ21haWwuY29tIn19.xai-_cwJ8DOa-n7kUOYR37k822cD5cpUtAPMjk2GNzU');
+  fetch("https://apicsi.mipgenlinea.com/stopUpdate", {
     method: "POST",
     body: datos,
   })

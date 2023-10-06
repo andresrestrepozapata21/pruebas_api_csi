@@ -4,8 +4,8 @@ var answer = document.getElementById("answer");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
-  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTQ0NTk3MjcsImV4cCI6MTcwODk3NDkyNywiZGF0YSI6eyJpZCI6IjIzMiIsImVtYWlsIjoiYXJ6Ljk1MDIwM0BnbWFpbC5jb20ifX0.lqx-kk8x6Fcn32OpULl3JEPta8LAyyMoCz11JR3P9cA');
-  fetch("https://apicsi.csisecurity.co/alertRecord", {
+  datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODc4ODI4OTUsImV4cCI6MTcwMjM5ODA5NSwiZGF0YSI6eyJpZCI6IjkxIiwiZW1haWwiOiJkaWVnb0BnbWFpbC5jb20ifX0.q0kjpSHKRHWux6J1wz7AIkG8ZvauhJTi_5fju2eukbQ');
+  fetch("https://apicsi.mipgenlinea.com/loadPerfilePictureCustomer", {
     method: "POST",
     body: datos,
   })
@@ -21,14 +21,8 @@ form.addEventListener("submit", (e) => {
         answer.innerHTML = `
         <div class="alert alert-success" role="alert">
               ${data["result"]}
-              <br>
-              <br>
-              ${data["detail"]}
           </div>
         `;
-
-        console.log(data);
-        console.log(data["detail"]);
         form.reset();
       }
     });

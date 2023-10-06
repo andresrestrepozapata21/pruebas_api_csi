@@ -7,7 +7,7 @@ var answer2 = document.getElementById("answer2");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
-  fetch("https://pruebas.mipgenlinea.com/uploadDocumentsCustomer", {
+  fetch("https://apicsi.mipgenlinea.com/uploadDocumentsCustomer", {
     method: "POST",
     body: datos,
   })
