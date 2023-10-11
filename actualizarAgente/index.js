@@ -5,7 +5,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
   datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzc3MTAwNTksImV4cCI6MTY5MjIyNTI1OSwiZGF0YSI6eyJpZCI6IjI0IiwiZW1haWwiOiJhcnpAZ21haWwuY29tIn19.POyq2TBDNph8oOp9qCrjBIIznGXhSQsmtnLiL-oxlKc');
-  fetch("https://pruebas.mipgenlinea.com/putAgent", {
+  fetch("https://apicsireaction.csisecurity.co/putAgent", {
     method: "POST",
     body: datos,
   })

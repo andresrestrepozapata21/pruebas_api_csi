@@ -5,7 +5,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let datos = new FormData(form);
   datos.append('token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzg0NjAyODksImV4cCI6MTY5Mjk3NTQ4OSwiZGF0YSI6eyJpZCI6IjYwIiwiZW1haWwiOiJhcnouMzRAZ21haWwuY29tIn19.I93KP1VE3WAZRpnnFnzPOHq5VEgoyQOadnbvCHch4O8');
-  fetch("https://pruebas.mipgenlinea.com/tripPictureRecord", {
+  fetch("https://apicsi.csisecurity.co/tripPictureRecord", {
     method: "POST",
     body: datos,    
   })
